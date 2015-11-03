@@ -1,0 +1,39 @@
+
+
+
+$susy: (
+    columns: 12,
+    container: 90%,
+    gutters: 1/8,
+    gutter-position: inside
+);
+
+$narrow: 400px;
+$small: 650px;
+$medium: 960px;
+$wide: 1200px;
+
+
+//Colors
+$blue               : #008b8b;
+$green              : #008b8b;
+$yellow             : #EFC94C;
+$orange             : #FF7D31;
+$red                : #DF4848;
+$pink               : #CD0069;
+$purple             : #6C71C4;
+$dark               : #000000;
+$light              : #F1F1F2;
+
+
+
+$backgroundColor    : $light;
+$typeDefault        : $dark;
+$navBackground      : $blue;
+$navForeground      : $light;
+$navHover           : $yellow;
+$navBrandBg         : $red;
+$headersubbg        : $dark;
+
+//Font vars
+$fontfamily         :'Exo 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;

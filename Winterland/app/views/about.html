@@ -1,0 +1,176 @@
+<script>
+ $(document).ready(function () {
+        $('.navList li').removeClass("active");
+        $('.navStore').addClass('active');
+    });
+</script>
+
+ 
+<section class="ShopPage">
+    <div class="container">
+      <div id="scene">
+        
+        <div id="filter">
+        <sec class="filterList">  
+            <label class="group searchBoxDiv" id="flip">
+             <input type="text" ng-model="search" placeholder="Search" class="searchBox">
+            </label>
+            
+            
+            <label class="group text">|
+                <input type="checkbox" ng-click="includeTag('board')"></input>
+                Show Boards |
+            </label>
+            <label class="group text" id="flip">
+                <input type="checkbox" ng-click="includeTag('gear')"></input>
+                Show Equipment 
+            </label>
+            <label class="group text">
+                |
+                <input type="checkbox" ng-click="includeTag('ski')"></input>
+                Show Ski Set |
+            </label>
+            <label id="flip">
+            Order By:
+            </label>
+            <select ng-model="shopOrder" class="text" id="flip">
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+                <option value="tag">Type</option>
+            </select>
+        </sec>
+        </div> 
+
+
+            <div class="shoppingList" id="shoppingList">
+            
+            <div ng-repeat="item in filtered = (list | filter: listFilter | filter: search | orderBy: shopOrder)" ng-if="$index % 3 == 0" >
+            <div class="row">
+
+                <sec class="part" id="part" uib-popover-template="dynamicPopover.templateUrl" popover-trigger="mouseenter" popover-placement="right" popover-title="{{filtered[$index].name}}" popover-append-to-body="true">
+                    <div id="shoppingImg">
+                     <img ng-src="images/{{filtered[$index].shortname}}.jpg"/>
+                    </div>
+                    <div id="shoppingName">
+                        {{filtered[$index].name}}
+                    </div>
+                    <div id="shoppingPrice">
+                      Price:<span id="amount"> ${{filtered[$index].price}}</span>
+                    </div>
+                    
+                    <!--Popup Template -->
+                    <script type="text/ng-template" id="popTemp.html">
+                        <div class="cont">
+                            
+                            <div class="popUp">
+                                <div class="row">
+                                <div class="popImg">
+                                    <img ng-src="images/{{filtered[$index].shortname}}.jpg"/>
+                                </div>
+                                </div>
+                                <div class="popTitle">
+                                  <span class="textHigh">Name:</span>  {{filtered[$index].name}}
+                                </div>
+                                <div class="popPrice">
+                                    <span class="textHigh">Price:</span>  ${{filtered[$index].price}}
+                                </div>
+                                <div class="popDesc">
+                                    <span class="textHigh">Description:</span>      {{filtered[$index].desc}}
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </script>
+                    <!-- End Popup Template -->
+                </sec>
+ 
+                
+
+                <sec class="part" id="part2" ng-if="$index+1 < filtered.length" uib-popover-template="dynamicPopover.templateUrl1" popover-trigger="mouseenter" popover-placement="right" popover-title="{{filtered[$index+1].name}}" popover-append-to-body="true">
+                    <div id="shoppingImg">
+                     <img ng-src="images/{{filtered[$index+1].shortname}}.jpg"/>
+                    </div>
+                    <div id="shoppingName">
+                        {{filtered[$index+1].name}}
+                    </div>
+                    <div id="shoppingPrice">
+                      Price:<span id="amount"> ${{filtered[$index+1].price}}</span>
+                    </div>
+                    
+                        <script type="text/ng-template" id="popTemp1.html">
+                        <div class="cont">
+                            
+                            <div class="popUp">
+                                <div class="row">
+                                    <div class="popImg">
+                                        <img ng-src="images/{{filtered[$index+1].shortname}}.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="popTitle">
+                                  <span class="textHigh">Name:</span>  {{filtered[$index+1].name}}
+                                </div>
+                                <div class="popPrice">
+                                    <span class="textHigh">Price:</span>  ${{filtered[$index+1].price}}
+                                </div>
+                                <div class="popDesc">
+                                    <span class="textHigh">Description:</span>      {{filtered[$index+1].desc}}
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </script>
+                    
+                </sec>
+ 
+
+                <sec class="part" id="part3" ng-if="$index+2 < filtered.length" uib-popover-template="dynamicPopover.templateUrl2" popover-trigger="mouseenter" popover-placement="right" popover-title="{{filtered[$index+2].name}}" popover-append-to-body="true" popover-popup-delay="20">
+                   <div id="shoppingImg">
+                     <img ng-src="images/{{filtered[$index+2].shortname}}.jpg"/>
+                    </div>
+                    <div id="shoppingName">
+                        {{filtered[$index+2].name}}
+                    </div>
+                    <div id="shoppingPrice">
+                      Price:<span id="amount"> ${{filtered[$index+2].price}}</span>
+                    </div>
+                    
+                    <script type="text/ng-template" id="popTemp2.html">
+                        <div class="cont">
+                            
+                            <div class="popUp" id="right">
+                                <div class="row">
+                                <div class="popImg">
+                                    <img ng-src="images/{{filtered[$index+2].shortname}}.jpg"/>
+                                </div>
+                                </div>
+                                <div class="popTitle">
+                                  <span class="textHigh">Name:</span>  {{filtered[$index+2].name}}
+                                </div>
+                                <div class="popPrice">
+                                    <span class="textHigh">Price:</span> ${{filtered[$index+2].price}}
+                                </div>
+                                <div class="popDesc">
+                                     <span class="textHigh">Description:</span>   {{filtered[$index+2].desc}}
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </script>
+                    
+                </sec>
+  
+             
+                
+    <!--            
+            </tr>      
+        </table>
+    -->  
+        </div>
+    </div>
+
+
+
+</div>
+</div>
+</div>
+</section>

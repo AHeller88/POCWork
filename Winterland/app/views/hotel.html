@@ -1,0 +1,143 @@
+   
+<script>
+ $(document).ready(function () {
+        $('.navList li').removeClass("active");
+        $('.navHotel').addClass('active');
+     
+        var wheight = $(window).height(); //window height
+    
+        $('.fullheight').css('height', wheight);
+    
+        $(window).resize(function() {
+            var wheight = $(window).height(); //window height
+        $('.fullheight').css('height', (wheight-54));
+        })
+    });
+</script>      
+
+    <div id="content">
+        <div id="welcome" class="fullheight">
+            <h3>Welcome to Winterland Hotel</h3>
+        </div><!--end welcome -->
+
+    
+        <div id="features">
+            <div id="sectiontitle">
+                <h2>Special Features</h2>
+            </div>
+            <div id="carousel" class="carousel slide fullheight" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item fullheight active" id="firstSLide">
+                    
+                        <div class="carousel-caption" id="caption">
+                        <p>Heated pool for the kiddies!</p>
+                        </div>
+                    </div>
+                    <div class="item fullheight" id="secondSLide">
+                        
+                        <div class="carousel-caption" id="caption">
+                        <p>Fancy ice bar for the adults!</p>
+                        </div>
+                    </div>
+                    <div class="item fullheight" id="thirdSLide">
+                       
+                        <div class="carousel-caption" id="caption">
+                        <p>..And fancy seating to.. sit at?</p>
+                        </div>
+                </div>
+                </div>
+            </div><!--end features carousel -->
+           
+        </div><!--end features -->
+            <script >
+                $('.carousel').carousel({
+                    interval: 5000
+                })    
+
+            </script>
+                 
+        
+        <div id="rooms" >   
+            <div id="sectiontitle">
+                <h2>Room Types</h2>
+                <p>Winterland Hotel features several room types to reach a wide range of needs</p>
+            </div>
+        <div id="smallRoom" class="section">
+            <h2>Lovers Nest</h2>
+            <p>The lover's nest room is ideal for a romantic getaway, with features designed to make your stay as relaxing and special as possible.</p>
+            <ul>
+                <li>King size bed</li>
+                <li>Large clawfoot tub that seats 3</li>
+                <li>A <i>wide</i> range of TV channels</li>
+            </ul>  
+        </div>
+        <div id="largeRoom" class="section">
+            <h2>Family Room</h2>
+            <p>The family room is perfect for the family of 4, designed to not only relax the parents but to also entertain the kids.</p>
+            <ul>
+                <li>Two bedrooms connected via central living room</li>
+                <li> Two queen size beds</li>
+                <li>Living room perfect for family activites</li>
+                <li>Two bathrooms, 1 per bedroom</li>
+                <li>Family freindly TV channels</li>
+            </ul>  
+        </div>
+        <div id="igloo" class="section">
+            <h2>Igloo</h2>
+            <p>Our Igloo room is just that, an Igloo! Made from actual ice, and situated directly behind the main building, an igloo is perfect for the adventrourus single, or couple. <red>(Spots Limited)</red></p>
+            <ul>
+                <li>15x15 feet floor plan</li>
+                <li>Fur lined queen sized bed (not real fur to any PITA activits)</li>
+                <li>Tv with premium channels</li>
+                <li>Bear Skin rug (again not real PITA)</li>
+            </ul>
+        </div>
+        <div id="additionalRoom" class="section">
+            <p>All rooms come with several shared features:</p>
+               <ul>
+                    <li>Complimentry Meals (3 a day)</li>
+                    <li>Optional itinerary including tours and special events</li>
+                    <li>Ski Pass the local resort, good for duration of stay</li>
+               </ul>
+            
+        </div>
+            
+        </div><!--end rooms -->
+        
+        <!--
+        <div id="events">
+            
+        </div>end events 
+        -->
+        
+        
+        <div id="attractions">
+            <div id="sectiontitle">
+                <h2>Attractions</h2>
+            </div>
+            
+            <div class="fullheight" id="snowboard">
+                <h3>Go Snowboarding!</h3>
+            </div>
+            <div class="fullheight" id="northenlights">
+                <h3>See the Northern Lights!</h3>
+            </div>
+            <div class="fullheight" id="lights">
+                <h3>Tour our lighted path!</h3>
+            </div>
+            <div class="fullheight" id="campfire">
+                <h3>Make a campfire!</h3>
+            </div>
+        </div><!--end attractions -->
+
+
+
+
+
+
+    </div><!-- -->
