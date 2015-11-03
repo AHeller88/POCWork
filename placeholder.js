@@ -1,5 +1,3 @@
-
-
 var shopingControllers = angular.module('shopingControllers', ['ngAnimate', 'ui.bootstrap']);
 
 shopingControllers.controller('ShopController', ['$scope','$http',function ($scope, $http) {
