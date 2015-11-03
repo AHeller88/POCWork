@@ -9,3 +9,6 @@ A website using different technologies.
 1st Iteration: Angular + Bootstrap
 
 2nd Iteration: SASS, Compass, Breakpoint, Suzy, and Scroll magic
+using boilerplate from https://github.com/alferov/generator-angular-gulp-browserify
+
+live version at: http://winterland.mybluemix.net/#/
