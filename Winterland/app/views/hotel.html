@@ -6,11 +6,11 @@
      
         var wheight = $(window).height(); //window height
     
-        $('.fullheight').css('height', wheight);
+        $('.fullheight').css('height', wheight-58);
     
         $(window).resize(function() {
             var wheight = $(window).height(); //window height
-        $('.fullheight').css('height', (wheight-54));
+        $('.fullheight').css('height', (wheight-58));
         })
     });
 </script>      
@@ -67,45 +67,59 @@
                 <h2>Room Types</h2>
                 <p>Winterland Hotel features several room types to reach a wide range of needs</p>
             </div>
-        <div id="smallRoom" class="section">
-            <h2>Lovers Nest</h2>
-            <p>The lover's nest room is ideal for a romantic getaway, with features designed to make your stay as relaxing and special as possible.</p>
-            <ul>
-                <li>King size bed</li>
-                <li>Large clawfoot tub that seats 3</li>
-                <li>A <i>wide</i> range of TV channels</li>
-            </ul>  
-        </div>
-        <div id="largeRoom" class="section">
-            <h2>Family Room</h2>
-            <p>The family room is perfect for the family of 4, designed to not only relax the parents but to also entertain the kids.</p>
-            <ul>
-                <li>Two bedrooms connected via central living room</li>
-                <li> Two queen size beds</li>
-                <li>Living room perfect for family activites</li>
-                <li>Two bathrooms, 1 per bedroom</li>
-                <li>Family freindly TV channels</li>
-            </ul>  
-        </div>
-        <div id="igloo" class="section">
-            <h2>Igloo</h2>
-            <p>Our Igloo room is just that, an Igloo! Made from actual ice, and situated directly behind the main building, an igloo is perfect for the adventrourus single, or couple. <red>(Spots Limited)</red></p>
-            <ul>
-                <li>15x15 feet floor plan</li>
-                <li>Fur lined queen sized bed (not real fur to any PITA activits)</li>
-                <li>Tv with premium channels</li>
-                <li>Bear Skin rug (again not real PITA)</li>
-            </ul>
-        </div>
-        <div id="additionalRoom" class="section">
-            <p>All rooms come with several shared features:</p>
-               <ul>
-                    <li>Complimentry Meals (3 a day)</li>
-                    <li>Optional itinerary including tours and special events</li>
-                    <li>Ski Pass the local resort, good for duration of stay</li>
-               </ul>
-            
-        </div>
+            <table id="theRooms">
+            <tr>
+                <td id="smallRoom" class="section toprow">
+                    <h2>Lovers Nest</h2>
+                    <p>The lover's nest room is ideal for a romantic getaway, 
+                        with features designed to make your stay as relaxing and special as possible.</p>
+                    <ul>
+                        <li>King size bed</li>
+                        <li>Large clawfoot tub that seats 3</li>
+                        <li>A <i>wide</i> range of TV channels</li>
+                    </ul>  
+                </td>
+                <td id="largeRoom" class="section toprow">
+                    <h2>Family Room</h2>
+                    <p>The family room is perfect for the family of 4, 
+                        designed to not only relax the parents but to also entertain the kids.</p>
+                    <ul>
+                        <li>Two bedrooms connected via central living room</li>
+                        <li> Two queen size beds</li>
+                        <li>Living room perfect for family activites</li>
+                        <li>Two bathrooms, 1 per bedroom</li>
+                        <li>Family freindly TV channels</li>
+                    </ul>  
+                </td>
+                
+                
+            </tr>
+            <tr>
+                
+                
+                <td id="igloo" class="section botrow">
+                    <h2>Igloo</h2>
+                    <p>Our Igloo room is just that, an Igloo! Made from actual ice, 
+                        and situated directly behind the main building, an igloo is perfect 
+                        for the adventrourus single, or couple. <red>(Spots Limited)</red></p>
+                    <ul>
+                        <li>15x15 feet floor plan</li>
+                        <li>Fur lined queen sized bed (not real fur to any PITA activits)</li>
+                        <li>Tv with premium channels</li>
+                        <li>Bear Skin rug (again not real PITA)</li>
+                    </ul>
+                </td>
+                <td id="additionalRoom" class="section botrow">
+                    <p>All rooms come with several shared features:</p>
+                       <ul>
+                            <li>Complimentry Meals (3 a day)</li>
+                            <li>Optional itinerary including tours and special events</li>
+                            <li>Ski Pass the local resort, good for duration of stay</li>
+                       </ul>
+
+                </td>
+            </tr>
+    </table><!--end #theRooms -->
             
         </div><!--end rooms -->
         

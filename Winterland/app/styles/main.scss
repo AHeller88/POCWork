@@ -2,6 +2,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "susy/sass/_susy.scss";
+@import "sassy-maps/sass/_sassy-maps.scss";
+@import "compass-breakpoint/stylesheets/_breakpoint.scss";
 // endbower
 
 
@@ -42,6 +44,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+    
+  
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -98,27 +102,27 @@ body {
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 85%;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
+//@media screen and (min-width: 768px) {
+//  .container {
+//    max-width: 85%;
+//  }
+//
+//  /* Remove the padding we set earlier */
+//  .header,
+//  .marketing,
+//  .footer {
+//    padding-left: 0;
+//    padding-right: 0;
+//  }
+//  /* Space out the masthead */
+//  .header {
+//    margin-bottom: 30px;
+//  }
+//  /* Remove the bottom border on the jumbotron for visual effect */
+//  .jumbotron {
+//    border-bottom: 0;
+//  }
+//}
 
 ul.nav li.navHotel:hover > ul.dropdown-menu{
     display: block;    

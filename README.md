@@ -8,7 +8,10 @@ A website using different technologies.
 
 1st Iteration: Angular + Bootstrap
 
-2nd Iteration: SASS, Compass, Breakpoint, Suzy, and Scroll magic
+2nd Iteration: SASS, Compass, Suzy, and Scroll magic
 using yeoman to generate template with grunt
+
+3rd Iteration: Breakpoint to make website responsive. (Working on Hotel page, not yet on Store)
+
 
 live version at: http://winterland.mybluemix.net/#/

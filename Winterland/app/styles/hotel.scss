@@ -1,6 +1,7 @@
 @import "susy";
 @import "variables";
 @import "mix";
+@import "compass-breakpoint/stylesheets/_breakpoint.scss";
 
 @import "compass";
 @import "compass/reset";
@@ -71,12 +72,67 @@
 #rooms {
      @include clearfix;
 
+     #theRooms {
+        float: none;
+        display: table;
+        table-layout: fixed;
+     }
+    
+     .botrow {
+        display: table-cell;
+        border: 1px solid $blue;
+        }
+            
+    .toprow {
+        display: table-cell;
+        border: 1px solid $red;
+    }
     
     padding-top: 0px;
     //padding-bottom: 10px;
+    
     .section{
-        @include span(1 or 4);
-        width: 260px;
+        //@include clearfix;
+        //width: 260px;
+        
+    
+        
+        @include breakpoint($low) {
+            //@include gallery(1 of 2);
+
+          
+            
+            padding-left: 5px;
+            padding-right: 5px;
+            
+            
+            
+            &#smallRoom {
+                width: 50%;
+               
+                padding-bottom: 42px;
+            }
+            &#largeRoom {
+                width: 50%;
+                
+            }
+             &#igloo {
+                 width: 50%; 
+                
+            }
+            &#additionalRoom {
+                width: 50%; 
+
+            }
+            
+            
+        }
+        
+        @include breakpoint(0px $low) {
+             @include span(1 of 1);
+        }
+        
+        
     }
     red {
         color: $red;
@@ -93,10 +149,10 @@
     #smallRoom {
          @include background-image(linear-gradient(top, lighten($pink, 20), lighten($red, 30)));
         h2 {
-            color: darken($pink, 10);
+            color: lighten($pink, 50);
+            text-align: center;
         }
-        padding-bottom: 65px;
-        padding-top: 5px;
+        padding-top: 10px;
         p {
             text-align: left;
         }
@@ -105,6 +161,11 @@
         @include background-image(linear-gradient(top, lighten($yellow, 20), lighten($orange, 30)));
         padding-bottom: 1px;
         padding-top: 5px;
+        h2 {
+            text-align: center;
+            color: lighten($blue, 5);
+        }
+        
          p {
             text-align: left;
         }
@@ -116,6 +177,7 @@
         padding-top: 5px;
         h2 {
             color: darken($light, 30);
+            text-align: center;
         }
          p {
             text-align: left;
@@ -148,17 +210,33 @@
     #campfire{
         @include backImage('../images/campfire.jpg');
         padding-top: 200px;
-        padding-left: 400px;
+        padding-left: 0px;
+        padding-right: 400px;
+        
+         @include breakpoint($small) {
+            padding-right: 0px;
+            padding-left: 450px;
+        }
+        
     }
     #snowboard{
         @include backImage('../images/snowboarding.jpeg');
         padding-top: 200px;
-        padding-left: 450px;
+        padding-left: 0px;
+        padding-right: 400px;
+        
+         @include breakpoint($small) {
+            padding-right: 0px;
+            padding-left: 450px;
+        }
+        
     }
     #northenlights {
         @include backImage('../images/northernlights.jpg');
         padding-top: 400px;
         padding-right: 400px;
+        
+        
     
     }
     #lights {
